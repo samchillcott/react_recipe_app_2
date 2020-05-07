@@ -4,8 +4,8 @@
 }
 
 .title {
-  display: flex;
-  justify-content: center;;
+	display: flex;
+	justify-content: center;
 }
 
 .search-form {
@@ -26,13 +26,17 @@
 	background: lightcoral;
 	border: none;
 	padding: 10px 20px;
-  color: white;
-  /* margin-top: 5px; */
-
+	color: white;
+	/* margin-top: 5px; */
 }
 
 .recipes {
 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap;
+  flex-wrap: wrap;
+	/* min-width: 500px; */
+
+	/* display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
 }
