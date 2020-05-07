@@ -8,11 +8,7 @@ const App = () => {
 
 	const [recipes, setRecipes] = useState([]);
 	const [search, setSearch] = useState("");
-	const [query, setQuery] = useState("chicken");
-
-	useEffect(() => {
-		getRecipes();
-	}, [query]);
+	const [query, setQuery] = useState("");
 
 	const getRecipes = async () => {
 		const response = await fetch(
@@ -22,6 +18,11 @@ const App = () => {
 		setRecipes(data.hits);
 		console.log(data.hits);
 	};
+
+	useEffect(() => {
+		getRecipes();
+		// eslint-disable-next-line 
+	}, [query]);
 
 	const updateSearch = (e) => {
 		setSearch(e.target.value);
