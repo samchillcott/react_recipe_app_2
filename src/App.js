@@ -21,7 +21,7 @@ const App = () => {
 
 	useEffect(() => {
 		getRecipes();
-		// eslint-disable-next-line 
+		// eslint-disable-next-line
 	}, [query]);
 
 	const updateSearch = (e) => {
@@ -36,10 +36,12 @@ const App = () => {
 
 	return (
 		<div className="App">
+			<h1 className="title">Recipe Requests</h1>
 			<form onSubmit={getSearch} className="search-form">
 				<input
 					className="search-bar"
 					type="text"
+					placeholder="What do you fancy for tea?"
 					value={search}
 					onChange={updateSearch}
 				/>
